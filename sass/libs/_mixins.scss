@@ -1,0 +1,165 @@
+@mixin clearfix {
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin input($height:36px, $fontsize:12px) {
+	height: $height;
+	border-radius: 0;
+	padding: 0 10px;
+	font-size: $fontsize;
+}
+@mixin select($height:36px, $fontsize:12px, $background:none){
+	border: none;
+	box-shadow: none;
+	height: $height;
+	font-size: $fontsize;
+	font-weight: 300;
+	text-transform: capitalize;
+	border-radius: 0 !important;
+	padding: 0 10px 0px 0px;
+	position: relative;
+	color: #a9a9a9;
+	line-height: 32px;
+}
+@mixin textarea($height:100px, $fontsize:12px) {
+	border: 2px solid $secondary-color;
+	min-height: $height;
+	border-radius: 0;
+	padding: 10px;
+	font-size: $fontsize;
+}
+@mixin button($height:40px, $fontsize:12px) {
+	margin-bottom: 0px;
+	padding: 0 20px;
+	text-transform: uppercase;
+	text-align: center;
+	display: inline-block;
+	font-size: $fontsize;
+	height:$height;
+	line-height:($height - 4px);
+	border-radius: 4px;
+	background: $secondary-color;
+	border: 2px solid $secondary-color;
+	color: $white;
+	font-weight: normal;
+	border-radius: 0px;
+	
+	&:hover {
+		color: $white;
+		background: $secondary-hover;
+		border: 2px solid $secondary-hover;
+	}
+}
+@mixin button-alt($height:36px, $fontsize:12px) {
+	padding: 0 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: $fontsize;
+	height:$height;
+	line-height:($height - 4px);
+	border-radius: 0;
+	background: none;
+	border: 2px solid $strong-color;
+	color: $strong-color;
+	&:hover {
+		background: none;
+		border-color: $muted-color;
+		color: $muted-color;
+	}
+}
+
+@mixin size($width, $height:$width){
+	width : $width;
+	height: $height;
+}
+
+@mixin cover(){
+	position:absolute;
+	left    :0;
+	right   :0;
+	top     :0;
+	bottom  :0;
+}
+
+@mixin auto_center($width, $height:$width){
+	@include cover();
+	margin: auto;
+}
+
+
+// Converting PX value to EM based on browser-context variable
+// Usage: @include em(16)
+@mixin em($pixels, $context: $browser-context) {
+	font-size: #{$pixels}px;
+	font-size: #{$pixels/$context}em;
+}
+
+@mixin rem($pixels, $context: $browser-context) {
+	font-size: #{$pixels}px;
+	font-size: #{$pixels/$context}rem;
+}
+
+// center vertically and/or horizontally an absolute positioned element
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    @include transform(translateX(-50%) translateY(-50%));
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    @include transform(translateX(-50%));
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    @include transform(translateY(-50%));
+  }
+}
+
+// antialiasing mode font rendering
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// breakpoints
+   
+$S:     480px;   
+$M:     768px;     
+$L:     1170px;     
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}
+
+// super light grid - it works with the .cd-container class inside style.scss
+
+@mixin column($percentage, $float-direction:left) {
+  width: 100% * $percentage;
+  float: $float-direction;
+}
+
+
+

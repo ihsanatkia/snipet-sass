@@ -1,0 +1,32 @@
+@import	"libs/settings";
+@import	"libs/mixins";
+// NOTE: We do not need NORMALIZE because bootstrap have done it
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Global Style
+2.0 Header
+3.0 Content
+4.0 Footrt
+5.0 Contact Page Template
+--------------------------------------------------------------*/
+
+/* 1.0 GLOBAL STYLE
+-------------------------------------------------------------- */
+@import "components/01_global";
+
+/* 2.0 HEADER
+-------------------------------------------------------------- */
+@import "components/02_header";
+
+/* 3.0 CONTENT
+-------------------------------------------------------------- */
+@import "components/03_content";
+
+/* 4.0 FOOTER
+-------------------------------------------------------------- */
+@import "components/04_footer";
+
+/* 5.0 CONTACT PAGE TEMPLATE
+-------------------------------------------------------------- */
+@import	"pages/page";
