@@ -116,53 +116,16 @@
       "oAP" : "\/assets\/vendor\/bootstrap\/css\/bootstrap.min.css.map",
       "oF" : 0
     },
-    "\/assets\/vendor\/bootstrap\/cssold\/bootstrap-theme.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
+    "\/assets\/vendor\/bootstrap\/js\/bootstrap.bundle.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
       "ma" : 0,
+      "mi" : 1,
       "oA" : 0,
-      "oAP" : "\/assets\/vendor\/bootstrap\/cssold\/bootstrap-theme-min.css",
+      "oAP" : "\/assets\/vendor\/bootstrap\/js\/min\/bootstrap.bundle.min-min.js",
       "oF" : 0,
-      "pg" : 0
-    },
-    "\/assets\/vendor\/bootstrap\/cssold\/bootstrap-theme.min.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/vendor\/bootstrap\/cssold\/bootstrap-theme.min-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/assets\/vendor\/bootstrap\/cssold\/bootstrap.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/vendor\/bootstrap\/cssold\/bootstrap-min.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/assets\/vendor\/bootstrap\/cssold\/bootstrap.min.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/vendor\/bootstrap\/cssold\/bootstrap.min-min.css",
-      "oF" : 0,
-      "pg" : 0
+      "sC" : 1,
+      "tS" : 0
     },
     "\/assets\/vendor\/font-awesome\/css\/font-awesome.css" : {
       "aP" : 1,
